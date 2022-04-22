@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  a(href='/productos')
+    button(type='button' style='background-color: #e80f0f') Ver todos los productos
+  h2 Ingresa un nuevo Producto
+  form(action='/productos' method='POST')
+   label Nombre
+   input(type='text' name='title'  required )
+   label Precio
+   input(type='number' name='price' required )
+   label Imagen
+   input(type='text' name='thumbnail')
+   button(type='submit') Agregar Producto

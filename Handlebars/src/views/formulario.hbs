@@ -1,0 +1,20 @@
+<a href='/productos'>
+  <button type='button' style='background-color: #e80f0f'> Ver todos los productos </button>
+</a>
+
+<h2>Ingresa un nuevo Producto</h2>
+
+<form action='/productos' method='POST'>
+  <label>Nombre</label>
+  <input type='text' name='title'  required />
+
+  <label>Precio</label>
+  <input type='number' name='price' required />
+
+  <label>Imagen</label>
+  <input type='text' name='thumbnail'/>
+  <br>
+  <br>
+
+  <button type='submit'>Agregar Producto</button>
+</form>

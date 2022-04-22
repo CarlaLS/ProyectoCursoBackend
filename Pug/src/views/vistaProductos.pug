@@ -1,0 +1,25 @@
+extends layout 
+
+block content
+  a(href='/')
+    button(type='button' style='background-color:#e80f0f') Volver al inicio
+  h2.mb-4  Vista de Productos
+
+  if todosProductos.length > 0
+    table.table.table-dark.table-striped
+      thead
+        tr
+          th.ps-4(scope='col') Nombre
+          th.text-center(scope='col') Precio
+          th.text-center(scope='col') Imagen
+      tbody
+        each productos in todosProductos
+          tr
+            th.ps-4.align-middle(scope='row')= productos.title
+            td.text-center.align-middle= productos.price
+            td
+              .image-container.text-center
+                img.img-thumbnail(src= productos.thumbnail alt='Product image')
+  else
+    .message
+      h2 No hay productos
